@@ -61,3 +61,34 @@ function Fre(str) {
   return frequency;
 };
 // console.log(Fre('calculator')
+
+
+let object = {
+    firstName: "Hello",
+    lastName: "World",
+    "car.name": "Duster",
+    "car.price": 9.9,
+    "car.mileage": 16.42,
+    "car.seat.0.seater": 5,
+    "car.seat.0.seatLength": 4360,
+  };
+  
+  let unflattenObject = (data) => {
+    let result = {};
+    for (let inner_key in data) {
+      let keys = inner_key.split(".");
+      keys.reduce((acc, value, index) => {
+        return (
+          acc[value] ||
+          (acc[value] = isNaN(Number(keys[index + 1]))
+            ? keys.length - 1 === index
+              ? data[inner_key]
+              : {}
+            : [])
+        );
+      }, result);
+    }
+    return result;
+  };
+  console.log(JSON.stringify(
+    unflattenObject(object), null, 4));
