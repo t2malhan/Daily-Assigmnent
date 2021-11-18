@@ -60,3 +60,31 @@ var obj={
           f1:"Mago",
      
    }
+
+
+   
+//assginment ques.
+
+function Fre(str) {
+    var frequency = {};
+      for (var i=0; i<str.length;i++) {
+       var character = str.charAt(i);
+        if (frequency[character]) {
+         frequency[character]++;
+      } else {
+         frequency[character] = 1;
+      }
+  }
+
+  return frequency;
+};
+// console.log(Fre('calculator')
+
+a=[3,5,2,1,6]
+
+function sh (arr) {
+  var max = Math.max.apply(null,arr)
+  arr.splice(arr.indexOf(max), 1);
+  console.log(Math.max.apply(null,arr))
+}
+// Console.log(sh(a))
