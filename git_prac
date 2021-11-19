@@ -5,3 +5,16 @@ it merge to local  and remote  commit repo
 
 
 git commit --amend --no-edit
+
+git commit --amend --no-edit
+
+git rm    = used to remove a file from a Git repository , same as in like linux
+
+git reset HEAD <file> = allows u to unstage the file , though rm is option ,but it will delete the file (HEAD BY DEFAULT)
+  suppose u git add new file , now u dont want that > git reset -- <filename> , this will unstage the file , when u go for committ
+
+git force push = git push -f origin master     - will overwrite the body , so not recommended
+
+git diff  = suppose i make any changes in the file , it will be replicated and shown the changes in the file
+
+git stash = used to archieve the file   |  git stash   | git stash apply STASH-NAME   | git stash pop STASH-NAME
