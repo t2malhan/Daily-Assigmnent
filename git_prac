@@ -3,3 +3,5 @@ Us git init
 git pull origin master --allow-unrelated-histories 
 it merge to local  and remote  commit repo
 
+
+git commit --amend --no-edit
